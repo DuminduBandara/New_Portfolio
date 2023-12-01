@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Admin Panel",
+        "type": "Full Stack Development",
+        "year": 2022,
+        "tech": "MERN | Material UI | NIVO",
+        "pic": "/images/project1.svg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
+    },
+    {
+        "id": 2,
+        "name": "E-COMMERCE WEB SITE",
+        "type": "Full Stack Development",
+        "year": 2022,
+        "tech": "MERN | Tailwind CSS",
+        "pic": "/images/project2.svg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
+    },
+    {
+        "id": 3,
+        "name": "WEATHER APPLICATION",
+        "type": "Front End Development",
+        "year": 2022,
+        "tech": "React JS | Tailwind CSS",
+        "img": "/Project3",
+        "pic": "/images/project3.svg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
+    }
+]
