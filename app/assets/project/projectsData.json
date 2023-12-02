@@ -23,8 +23,52 @@
         "type": "Front End Development",
         "year": 2022,
         "tech": "React JS | Tailwind CSS",
-        "img": "/Project3",
         "pic": "/images/project3.svg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
+    },
+    {
+        "id": 4,
+        "name": "RESTUARENT WEB SITE",
+        "type": "Front End Development",
+        "year": 2021,
+        "tech": "HTML | CSS | Bootstrap | JavaScript",
+        "pic": "/images/project4.svg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
+    },
+    {
+        "id": 5,
+        "name": "NETWORK TOWERS MANAGEMENT SYSTEM",
+        "type": "Full Stack Development",
+        "year": 2022,
+        "tech": "MERN | Material UI | NIVO",
+        "pic": "/images/project5.svg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
+    },    
+    {
+        "id": 6,
+        "name": "CRYPTOGRAPY PROJECT",
+        "type": "Full Stack Development",
+        "year": 2021,
+        "tech": "HTML | CSS | Bootstrap | JavaScript | PHP",
+        "pic": "/images/project6.svg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
+    },
+    {
+        "id": 7,
+        "name": "PORTFOLIO",
+        "type": "Front End Development",
+        "year": 2021,
+        "tech": "React JS | Tailwind CSS | Framer Motion",
+        "pic": "/images/project7.svg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
+    },
+    {
+        "id": 8,
+        "name": "ONLINE BANKING SYSTEM",
+        "type": "Full Stack Development",
+        "year": 2021,
+        "tech": "HTML | CSS | JavaScript | PHP",
+        "pic": "/images/project8.svg",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
     }
 ]

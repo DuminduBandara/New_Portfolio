@@ -1,8 +1,11 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import ProjectsData from '../assets/project/projectsData.json';
+import SideMenu from './sideMenu';
 
 import Logo from '../assets/logo.svg';
 import MenuIcon from '../assets/menuIcon.svg';
@@ -13,15 +16,21 @@ import GitHub from '../assets/github.svg';
 import Phone from '../assets/phone-solid.svg';
 import Linkedin from '../assets/linkedin-in.svg';
 
-export default function area() {
+export default function Area() {
   // console.log("Data" + ProjectsData[1].name);
 
+  const [toggleOn, setToggleOn] = useState(false);
+  console.log(toggleOn);
+
   return (
-    <section className="w-full">
+    <section className={`w-full overflow-hidden`}>
       {/* header */}
       <nav className="w-full h-[75pt] flex justify-between items-center">
         <Image src={Logo} alt="logo-Dumindu-Bandara" width={223} height={76} />
-        <button className="bg-clrTitle rounded-full w-[50pt] h-[50pt] fixed z-50 right-10">
+        <button
+          className="bg-clrTitle rounded-full w-[50pt] h-[50pt] fixed z-50 right-10 shadow-2xl shadow-clrSubTitle"
+          onClick={() => setToggleOn(!toggleOn)}
+        >
           <Image
             src={MenuIcon}
             alt="menu"
@@ -32,6 +41,8 @@ export default function area() {
         </button>
       </nav>
 
+      <SideMenu toggleShow={toggleOn} onClick={() => setToggleOn(!toggleOn)}/>
+
       {/* Hero */}
       <section className="w-full flex flex-col md:flex-row justify-between md:items-center px-5 md:px-10 mb-10">
         <div className="w-full md:w-[50%] h-[50%] md:h-full flex flex-col justify-center order-2 md:order-1">
@@ -40,7 +51,9 @@ export default function area() {
           <h4 className="text-clrNormalTitle font-medium text-xl">
             Frontend Developer | UI/UX Designer | Undergraduate
           </h4>
-          <button className="text-clrTitle rounded-full border-2 border-clrTitle w-[223px] h-[65px] mt-5 py-2 font-medium mx-auto md:mx-0">
+          <button
+            className="text-clrTitle rounded-full border-2 border-clrTitle w-[223px] h-[65px] mt-5 py-2 font-medium mx-auto md:mx-0"
+          >
             GET IN TOUCH
           </button>
         </div>
@@ -59,7 +72,7 @@ export default function area() {
       </section>
 
       {/* About */}
-      <section className="w-full px-5 py-10 md:py-20 md:px-20">
+      <section className="w-full px-5 py-10 md:py-20 md:px-20" id="about">
         <h1 className="text-center mb-10 text-6xl text-clrTitle">ABOUT ME</h1>
         <div className="flex flex-col md:flex-row md:justify-between">
           <div>
@@ -89,7 +102,7 @@ export default function area() {
       </section>
 
       {/* Resume */}
-      <section className="w-full px-5 py-10 md:py-20 md:px-20">
+      <section className="w-full px-5 py-10 md:py-20 md:px-20" id="resume">
         <h1 className="text-center mb-10 text-6xl text-clrTitle">RESUME</h1>
         <div className="mb-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
@@ -137,7 +150,7 @@ export default function area() {
       </section>
 
       {/* Projects */}
-      <section className="w-full px-5 py-10 md:py-20 md:px-20">
+      <section className="w-full px-5 py-10 md:py-20 md:px-20" id="projects">
         <h1 className="text-center mb-10 text-6xl text-clrTitle">PROJECTS</h1>
 
         <section>
@@ -179,7 +192,7 @@ export default function area() {
       </section>
 
       {/* contact */}
-      <section className="w-full px-5 py-10 md:py-20 md:px-20">
+      <section className="w-full px-5 py-10 md:py-20 md:px-20" id="contact">
         <h1 className="text-center mb-10 text-6xl text-clrTitle">CONTACT</h1>
 
         <div className="w-full flex flex-col md:flex-row md:justify-between md:gap-28 gap-10">
@@ -268,6 +281,7 @@ export default function area() {
         </div>
       </section>
 
+      {/* footer */}
       <section className="w-full flex justify-between items-center px-5 py-10 md:py-20 md:px-20">
         <h4 className="text-lg">©Code By DUMINDU BANDARA 2023</h4>
         <button
