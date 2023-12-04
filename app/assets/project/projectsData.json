@@ -6,6 +6,8 @@
         "year": 2022,
         "tech": "MERN | Material UI | NIVO",
         "pic": "/images/project1.svg",
+        "link": "https://github.com/lakshan969Github/Mern-admin-borad.git",
+        "live": "",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
     },
     {
@@ -15,6 +17,8 @@
         "year": 2022,
         "tech": "MERN | Tailwind CSS",
         "pic": "/images/project2.svg",
+        "link": "https://github.com/DuminduBandara/EcommerceSystem.git",
+        "live": "",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
     },
     {
@@ -24,6 +28,8 @@
         "year": 2022,
         "tech": "React JS | Tailwind CSS",
         "pic": "/images/project3.svg",
+        "link": "https://github.com/lakshan969Github/React-Weather-App.git",
+        "live": "https://345deb31.react-weather-app-b39.pages.dev/",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
     },
     {
@@ -33,6 +39,8 @@
         "year": 2021,
         "tech": "HTML | CSS | Bootstrap | JavaScript",
         "pic": "/images/project4.svg",
+        "link": "https://github.com/lakshan969Github/Bootstrap-FoodOrdering-Site.git",
+        "live": "https://food-rest.netlify.app/",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
     },
     {
@@ -42,6 +50,8 @@
         "year": 2022,
         "tech": "MERN | Material UI | NIVO",
         "pic": "/images/project5.svg",
+        "link": "https://github.com/DuminduBandara/Network-Towers-Management-System.git",
+        "live": "",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
     },    
     {
@@ -51,6 +61,8 @@
         "year": 2021,
         "tech": "HTML | CSS | Bootstrap | JavaScript | PHP",
         "pic": "/images/project6.svg",
+        "link": "https://github.com/lakshan969Github/CFT-Challenge.git",
+        "live": "",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
     },
     {
@@ -60,6 +72,8 @@
         "year": 2021,
         "tech": "React JS | Tailwind CSS | Framer Motion",
         "pic": "/images/project7.svg",
+        "link": "https://github.com/lakshan969Github/React-Portfolio.git",
+        "live": "https://e63a9ce5.react-portfolio-27w.pages.dev/",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
     },
     {
@@ -69,6 +83,8 @@
         "year": 2021,
         "tech": "HTML | CSS | JavaScript | PHP",
         "pic": "/images/project8.svg",
+        "link": "https://github.com/lakshan969Github/Online-Banking-System.git",
+        "live": "",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam ut nobis? Soluta quas natus quis sunt veritatis voluptates consequatur expedita, possimus dolorem, pariatur libero fugit qui magni accusantium et reprehenderit itaque alias culpa nobis neque temporibus! Distinctio necessitatibus ratione provident rerum id sunt. Aperiam et esse illum sed similique?"
     }
 ]

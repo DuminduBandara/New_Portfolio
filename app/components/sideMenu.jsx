@@ -1,39 +1,9 @@
-'use client'
+'use client';
 
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-
-const variants = {
-  init: {
-    opacity: 0, height: '0%'
-  },
-  open: {
-    opacity: 1,
-    height: '100%',
-    transition: {
-      ease: 'linear',
-      y: { duration: 2 },
-      type: 'tween',
-      stiffness: 400,
-    },
-  },
-  closed: { opacity: 0, height: '0%' },
-};
-
-const navLinkAnimation = {
-  init: {
-    opacity: 0,
-    translateY: -100,
-  },
-  animate: {
-    opacity: 1,
-    translateY: 0,
-  },
-};
 
 export default function SideMenu({ toggleShow, onClick }) {
-
   const [linkact, setlinkact] = useState(toggleShow);
 
   const handleLinkClick = () => {
@@ -71,36 +41,20 @@ export default function SideMenu({ toggleShow, onClick }) {
     },
   ];
   return (
-    <motion.div
-      className="w-full h-0 bg-clrTitle fixed top-0 shadow-xl"
-      // animate={(toggleShow ? 'open' : 'closed') || (linkact ? 'open' : 'closed')}
-      animate={(toggleShow || linkact) ? 'open' : 'closed'}
-      variants={variants}
-    >
+    <div className={`${toggleShow ? 'w-full h-full bg-clrTitle fixed shadow-xl z-50 block top-0' : 'hidden'}`} >
       <div className="w-full h-full flex flex-col justify-center items-center gap-10 fixed">
         {navLinks.map((navLink, i) => (
-          <motion.div
-            key={navLink.id}
-            variants={navLinkAnimation}
-            initial="init"
-            animate="animate"
-            transition={{
-              type: 'spring',
-              duration: 3,
-              delay: i * 0.1,
-            }}
-            whileHover={{
-              scale: 1.6,
-              transition: { duration: 0.6 },
-            }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Link href={`#${navLink.path}`} className="text-7xl font-medium text-clrSubTitle uppercase" onClick={handleLinkClick}>
+          <div key={i}>
+            <Link
+              href={`#${navLink.path}`}
+              className="text-7xl font-medium text-clrSubTitle uppercase"
+              onClick={handleLinkClick}
+            >
               {navLink.name}
             </Link>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }

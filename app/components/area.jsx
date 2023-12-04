@@ -1,74 +1,128 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-import ProjectsData from '../assets/project/projectsData.json';
-import SideMenu from './sideMenu';
+import Header from './header';
+import Projects from './projects';
+import Resume from './resume';
 
-import Logo from '../assets/logo.svg';
-import MenuIcon from '../assets/menuIcon.svg';
 import HeroVector from '../assets/heroVector.svg';
 import Profile from '../assets/profile.svg';
 import Email from '../assets/envelope-open-regular.svg';
 import GitHub from '../assets/github.svg';
 import Phone from '../assets/phone-solid.svg';
 import Linkedin from '../assets/linkedin-in.svg';
+import UpRightArrow from '../assets/uprightarrow.svg';
+import Code from '../assets/code.svg';
 
 export default function Area() {
-  // console.log("Data" + ProjectsData[1].name);
+  const buttonHover = {
+    initial: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, type: 'tween' },
+    },
+    buttonHover: {
+      scale: [1, 1.1, 1, 1.1, 1],
+      transition: { duration: 1 },
+    },
+  };
 
-  const [toggleOn, setToggleOn] = useState(false);
-  console.log(toggleOn);
+  const titleAnimate = {
+    initial: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  const lgTextVarient = {
+    initial: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, type: 'tween' },
+    },
+    lgTextHover: {
+      x: 20,
+      transition: { duration: 1 },
+    },
+  };
 
   return (
-    <section className={`w-full overflow-hidden`}>
+    <section className={`w-full`}>
       {/* header */}
-      <nav className="w-full h-[75pt] flex justify-between items-center">
-        <Image src={Logo} alt="logo-Dumindu-Bandara" width={223} height={76} />
-        <button
-          className="bg-clrTitle rounded-full w-[50pt] h-[50pt] fixed z-50 right-10 shadow-2xl shadow-clrSubTitle"
-          onClick={() => setToggleOn(!toggleOn)}
-        >
-          <Image
-            src={MenuIcon}
-            alt="menu"
-            width={40}
-            height={40}
-            className="mx-auto text-clrSubTitle"
-          />
-        </button>
-      </nav>
-
-      <SideMenu toggleShow={toggleOn} onClick={() => setToggleOn(!toggleOn)}/>
+      <Header />
 
       {/* Hero */}
       <section className="w-full flex flex-col md:flex-row justify-between md:items-center px-5 md:px-10 mb-10">
         <div className="w-full md:w-[50%] h-[50%] md:h-full flex flex-col justify-center order-2 md:order-1">
-          <h1 className="text-6xl text-clrTitle font-light">{`HEY I'M`}</h1>
-          <h1 className="text-3xl text-clrTitle font-bold">DUMINDU BANDARA</h1>
-          <h4 className="text-clrNormalTitle font-medium text-xl">
+          <motion.h1
+            variants={titleAnimate}
+            initial="initial"
+            animate="visible"
+            transition={{ type: 'tween', duration: 0.2 }}
+            className="text-6xl text-clrTitle font-light"
+          >{`HEY I'M`}</motion.h1>
+          <motion.h1
+            variants={titleAnimate}
+            initial="initial"
+            animate="visible"
+            transition={{ type: 'tween', delay: 0.3 }}
+            className="text-3xl md:text-6xl text-clrTitle font-bold"
+          >
+            DUMINDU BANDARA
+          </motion.h1>
+          <motion.h4
+            variants={titleAnimate}
+            initial="initial"
+            animate="visible"
+            transition={{ type: 'tween', duration: 0.6 }}
+            className="text-clrNormalTitle font-medium text-xl"
+          >
             Frontend Developer | UI/UX Designer | Undergraduate
-          </h4>
-          <button
+          </motion.h4>
+          <motion.button
+            variants={buttonHover}
+            initial="initial"
+            animate="visible"
+            whileHover="buttonHover"
             className="text-clrTitle rounded-full border-2 border-clrTitle w-[223px] h-[65px] mt-5 py-2 font-medium mx-auto md:mx-0"
           >
-            GET IN TOUCH
-          </button>
+            <Link href="#contact">GET IN TOUCH</Link>
+          </motion.button>
         </div>
-        <div className="w-full h-[50%] md:w-[50%] md:h-full order-1 md:order-2">
+        <motion.div
+          variants={titleAnimate}
+          initial="initial"
+          animate="visible"
+          transition={{ type: 'tween', duration: 0.8 }}
+          className="w-full h-[50%] md:w-[50%] md:h-full order-1 md:order-2"
+        >
           <Image src={HeroVector} alt="HeroVector" width="1000" height="500" />
-        </div>
+        </motion.div>
       </section>
 
       {/* Into */}
       <section className="w-full px-5 py-7 md:py-20 md:px-20 bg-clrTitle">
-        <span className="font-normal text-3xl md:text-7xl text-[#ffffff] leading-tight tracking-wide text-justify">
+        <p className="font-normal text-3xl md:text-7xl text-[#ffffff] leading-10 tracking-wide text-justify">
           I use my knowledge of design and development to create online
           experiences that make people feel good and help them connect with
           others.
-        </span>
+        </p>
       </section>
 
       {/* About */}
@@ -102,94 +156,10 @@ export default function Area() {
       </section>
 
       {/* Resume */}
-      <section className="w-full px-5 py-10 md:py-20 md:px-20" id="resume">
-        <h1 className="text-center mb-10 text-6xl text-clrTitle">RESUME</h1>
-        <div className="mb-5">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-            <div>
-              <h1 className="text-3xl md:text-5xl font-medium text-clrContentTitle mb-3">
-                My Expertise.
-              </h1>
-              <p className="text-xl text-clrParagraph leading-8 -tracking-wider mb-3">
-                I focus on all things design and web related. With each of my
-                services, my goal is to deliver an impactful and elevating
-                digital experience for everyone
-              </p>
-            </div>
-            <div className="flex flex-col  text-4xl md:text-6xl text-clrOPTTitle font-semibold">
-              <span className="mb-4 md:mt-16">Web Development</span>
-              <span className="mb-4">Web Design</span>
-              <span className="mb-4">Wireframing</span>
-              <span>UI/UX Design</span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-20">
-            <div className="order1 md:order-2">
-              <h1 className="text-3xl md:text-5xl font-medium text-clrContentTitle mb-3">
-                My Skills.
-              </h1>
-              <p className="text-xl text-clrParagraph leading-8 -tracking-wider mb-3">
-                These are my go to tech stack to make any projects happen. I am
-                always eager of learning more about my current stack, and new
-                technologies that could expand my horizons.
-              </p>
-            </div>
-            <div className="flex flex-col order-2 md:order-1 text-4xl md:text-6xl text-clrOPTTitle font-semibold">
-              <span className="mb-4 md:mt-16">HTML & CSS</span>
-              <span className="mb-4">JavaScript</span>
-              <span className="mb-4">React JS</span>
-              <span className="mb-4">Next JS</span>
-              <span className="mb-4">Node JS</span>
-              <span className="mb-4">GSAP</span>
-              <span className="mb-4">Tailwind CSS</span>
-              <span>Figma</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Resume />
 
       {/* Projects */}
-      <section className="w-full px-5 py-10 md:py-20 md:px-20" id="projects">
-        <h1 className="text-center mb-10 text-6xl text-clrTitle">PROJECTS</h1>
-
-        <section>
-          {ProjectsData.map((project) => (
-            <div className="w-full mb-10" key={project.id}>
-              <div className="w-full h-full">
-                <Image
-                  src={project.pic}
-                  alt={project.id}
-                  width={1200}
-                  height={500}
-                />
-              </div>
-
-              <div className="w-full my-6">
-                <div className="w-full flex mb-5">
-                  <span className="text-lg font-normal border-2 py-2 px-4 text-clrTitle border-clrTitle rounded-full mr-5">
-                    {project.year}
-                  </span>
-                  <span className="text-lg font-normal border-2 py-2 px-4 text-clrTitle border-clrTitle rounded-full">
-                    {project.tech}
-                  </span>
-                </div>
-                <div>
-                  <h2 className="text-[24px] font-medium ">{project.name}</h2>
-                  <h3 className="text-lg font-medium mb-2">{project.type}</h3>
-                  <p className="text-md text-clrParagraph leading-6 -tracking-wide">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </section>
-
-        <button className="text-clrTitle rounded-full border-2 border-clrTitle w-[223px] h-[65px] mt-5 py-2 font-medium mx-auto">
-          VIEW MORE
-        </button>
-      </section>
+      <Projects />
 
       {/* contact */}
       <section className="w-full px-5 py-10 md:py-20 md:px-20" id="contact">
@@ -230,12 +200,14 @@ export default function Area() {
                   ></textarea>
                 </div>
               </div>
-              <button
+              <motion.button
                 type="submit"
+                variants={buttonHover}
+                whileHover="buttonHover"
                 className="text-clrContentTitle rounded-full border-2 border-clrContentTitle w-[223px] h-[65px] mt-5 py-2 font-medium mx-auto"
               >
                 SEND MESSAGE
-              </button>
+              </motion.button>
             </form>
           </div>
           <div className="w-full md:w-[40%]">
@@ -244,14 +216,28 @@ export default function Area() {
                 Contact Details
               </h1>
               <ul>
-                <li className="flex my-3">
+                <motion.li
+                  variants={lgTextVarient}
+                  initial="initial"
+                  animate="visible"
+                  whileHover="lgTextHover"
+                  className="flex my-3"
+                >
                   <Image src={Email} alt="#" className="mr-3" />
-                  <Link href="#">dumindubandara969@gmail.com</Link>
-                </li>
-                <li className="flex">
+                  <Link
+                    href="mailto:dumindubandara969@gmail.com"
+                  >
+                    dumindubandara969@gmail.com
+                  </Link>
+                </motion.li>
+                <motion.li
+                  variants={lgTextVarient}
+                  whileHover="lgTextHover"
+                  className="flex"
+                >
                   <Image src={Phone} alt="#" className="mr-3" />
-                  <Link href="#">{`+(94) 716816224`}</Link>
-                </li>
+                  <span>{`+(94) 716816224`}</span>
+                </motion.li>
               </ul>
             </div>
 
@@ -260,14 +246,28 @@ export default function Area() {
                 My Digital Spaces
               </h1>
               <ul>
-                <li className="flex my-3">
+                <motion.li
+                  variants={lgTextVarient}
+                  initial="initial"
+                  animate="visible"
+                  whileHover="lgTextHover"
+                  className="flex my-3"
+                >
                   <Image src={Linkedin} alt="#" className="mr-3" />
-                  <Link href="#">Linkedin</Link>
-                </li>
-                <li className="flex">
+                  <Link href="https://www.linkedin.com/in/dumindulakshanbandara" target="_blank">
+                    Linkedin
+                  </Link>
+                </motion.li>
+                <motion.li
+                  variants={lgTextVarient}
+                  whileHover="lgTextHover"
+                  className="flex"
+                >
                   <Image src={GitHub} alt="#" className="mr-3" />
-                  <Link href="#">GitHub</Link>
-                </li>
+                  <Link href="https://github.com/DuminduBandara" target="_blank">
+                    GitHub
+                  </Link>
+                </motion.li>
               </ul>
             </div>
 
@@ -275,7 +275,23 @@ export default function Area() {
               <h1 className="text-[32px] text-clrTitle font-medium">
                 Location
               </h1>
-              <span className="my-3">Malabe, Sri Lanka</span>
+              <Link
+                href="https://maps.app.goo.gl/jm362sFJYj7wmm7d8"
+                target="_blank"
+                className="my-3"
+              >
+                Malabe, Sri Lanka
+              </Link>
+              <div className='overflow-hidden rounded-xl mt-5'>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31687.079365188318!2d79.94483254423363!3d6.9043628129019465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae256d59601df81%3A0x31a1dd96e8d49ba!2sMalabe!5e0!3m2!1sen!2slk!4v1701706615258!5m2!1sen!2slk"
+                  width="400"
+                  height="300"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -284,12 +300,14 @@ export default function Area() {
       {/* footer */}
       <section className="w-full flex justify-between items-center px-5 py-10 md:py-20 md:px-20">
         <h4 className="text-lg">©Code By DUMINDU BANDARA 2023</h4>
-        <button
+        <motion.button
           type="submit"
+          variants={lgTextVarient}
+          whileHover="lgTextHover"
           className="text-clrTitle rounded-full border-2 border-clrTitle w-[223px] h-[65px] py-2 font-medium"
         >
-          BACK TO TOP
-        </button>
+          <Link href="#">BACK TO TOP</Link>
+        </motion.button>
       </section>
     </section>
   );
